@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 import {
   Navbar,
@@ -20,21 +20,34 @@ const App = () => {
       <div className="main">
         <Layout>
           <div className="routes">
-            <Routes>
-              <Route path="/welcome" component={Homepage} />
-              <Route path="/exchanges" component={Exchanges} />
-              <Route path="/cryptocurrencies" component={Cryptocurrency} />
-              <Route path="/crypto/:coinId" component={CoinDetails} />
-              <Route path="/news" component={News} />
-            </Routes>
+            <Switch>
+              <Route exact path="/">
+                <Homepage />
+              </Route>
+              <Route exact path="/exchanges">
+                <Exchanges />
+              </Route>
+              <Route exact path="/cryptocurrencies">
+                <Cryptocurrency />
+              </Route>
+              <Route exact path="/crypto/:coinId">
+                <CoinDetails />
+              </Route>
+              <Route exact path="/news">
+                <News />
+              </Route>
+            </Switch>
           </div>
         </Layout>
         <div className="footer">
-          <Typography.Title level={5} style={{ color: "white" }}>
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
             CoinGeek <br />
             All rights reserved
           </Typography.Title>
-          <Space size="middle" style={{ color: "white" }}>
+          <Space>
             <Link to="/welcome">Home</Link>
             <Link to="/exchanges">Exchanges</Link>
             <Link to="/cryptocurrency">Cryptocurrency</Link>
