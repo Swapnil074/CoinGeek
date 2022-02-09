@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import {
   HomeOutlined,
   MoneyCollectOutlined,
-  FoundOutlined,
+  FundOutlined,
   MenuOutlined,
+  BulbOutlined,
 } from "@ant-design/icons";
 import icon from "../images/logo.png";
 
@@ -13,12 +14,25 @@ export default function Navbar() {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon} size="medium" />
+        <Avatar src={icon} size="large" />
         <Typography.Title level={2}>
           <Link to="/">CoinGeek</Link>
         </Typography.Title>
-        {/* <Button className='menu-controll-container'></Button> */}
       </div>
+      <Menu theme="dark">
+        <Menu.Item key="1" icon={<HomeOutlined />}>
+          <Link to="/">Home</Link>
+        </Menu.Item>
+        <Menu.Item key="2" icon={<FundOutlined />}>
+          <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+        </Menu.Item>
+        <Menu.Item key="3" icon={<MoneyCollectOutlined />}>
+          <Link to="/exchanges">Exchanges</Link>
+        </Menu.Item>
+        <Menu.Item key="4" icon={<BulbOutlined />}>
+          <Link to="/news">News</Link>
+        </Menu.Item>
+      </Menu>
     </div>
   );
 }
