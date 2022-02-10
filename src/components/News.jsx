@@ -19,8 +19,6 @@ const News = ({ simplified }) => {
   });
   if (isFetching) return <div>Loading...</div>;
 
-  console.log(cryptoNews);
-
   return (
     <>
       <Row gutter={[24, 24]} className="news-card-container">
