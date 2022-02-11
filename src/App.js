@@ -18,7 +18,7 @@ const App = () => {
         <Navbar />
       </div>
       <div className="main">
-        <Layout>
+        <Layout style={{ backgroundColor: "#FFFFFF" }}>
           <div className="routes">
             <Switch>
               <Route exact path="/">
@@ -39,7 +39,7 @@ const App = () => {
             </Switch>
           </div>
         </Layout>
-        <div className="footer">
+        {/* <div className="footer">
           <Typography.Title
             level={5}
             style={{ color: "white", textAlign: "center" }}
@@ -53,7 +53,7 @@ const App = () => {
             <Link to="/cryptocurrency">Cryptocurrency</Link>
             <Link to="/news">News</Link>
           </Space>
-        </div>
+        </div> */}
       </div>
     </div>
   );

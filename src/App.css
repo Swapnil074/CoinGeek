@@ -2,7 +2,7 @@
   --text-primary: #000;
   --bgPrimary: #fff;
   --bgSecondary: #f9f9f9;
-  --pink: #0071bd;
+  --pink: #000000;
   --light-blue: #e6f7ff;
   --border: #d9d9d9;
 }
@@ -20,11 +20,12 @@ a:hover {
 .app {
   display: flex;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
 .navbar {
   flex: 0.2;
-  background-color: rgb(0, 21, 41);
+  background-color: #fff;
 }
 
 .main {
@@ -33,21 +34,24 @@ a:hover {
 }
 .routes {
   padding: 20px;
+  border-radius: 40px;
+  margin: 1vh;
+  margin-right: 0.25vh;
+  background-color: #e5e5e5;
 }
 .nav-container {
   position: fixed;
-  left: 0;
+  left: 0.5%;
   margin: 10px;
   height: 100vh;
   margin: 0px;
-  background-color: rgb(0, 21, 41);
+  background-color: rgb(255, 255, 255);
 }
 
 .logo-container {
-  background-color: #001529;
+  background-color: #ffffff;
   display: flex;
   padding: 20px;
-  align-items: center;
   width: 100%;
 }
 .logo {
@@ -61,8 +65,8 @@ a:hover {
   position: absolute !important;
   right: 10px !important;
   top: 25px !important;
-  font-size: 1.2rem !important;
-  background-color: var(--bgSecondary) !important;
+  font-size: 1.5rem !important;
+  background-color: #fff !important;
   border: none !important;
 }
 
@@ -109,11 +113,11 @@ a:hover {
   }
 
   .nav-container {
-    height: 8vh;
+    height: 6vh;
     position: fixed;
     width: 100%;
     z-index: 100;
-    background-color: var(--bgSecondary);
+    background-color: "#FFFFFF";
   }
 
   .menu-control-container {
@@ -368,10 +372,10 @@ a:hover {
   margin-top: 20px !important;
 }
 
-.footer {
+/* .footer {
   background-color: #001529;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  align-items: center;
-}
+  align-items: center; */
+/* } */

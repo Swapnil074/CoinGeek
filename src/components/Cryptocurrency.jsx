@@ -33,6 +33,7 @@ const Cryptocurrency = ({ simplified }) => {
           <Col xs={24} sm={12} lg={6} className="crypto-card" key={coin.id}>
             <Link to={`/crypto/${coin.uuid}`}>
               <Card
+                style={{ borderRadius: "20px" }}
                 title={`${coin.rank}.${coin.name}`}
                 extra={<img className="crypto-image" src={coin.iconUrl} />}
                 hoverable

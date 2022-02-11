@@ -36,7 +36,9 @@ export default function Navbar() {
       <div className="logo-container">
         <Avatar src={icon} size="large" />
         <Typography.Title level={2}>
-          <Link to="/">CoinGeek</Link>
+          <Link to="/" style={{ color: "#000000", paddingLeft: 10 }}>
+            CoinGeek
+          </Link>
         </Typography.Title>
         <Button
           className="menu-control-container"
@@ -45,17 +47,42 @@ export default function Navbar() {
         />
       </div>
       {activeMenu && (
-        <Menu theme="dark">
-          <Menu.Item key="1" icon={<HomeOutlined />}>
+        <Menu
+          theme="light"
+          style={{
+            border: "none",
+            fontSize: 20,
+            // position: "absolute",
+            // top: "35%",
+            // left: "8%",
+          }}
+        >
+          <Menu.Item
+            key="1"
+            style={{ paddingBottom: 10 }}
+            icon={<HomeOutlined style={{ fontSize: 20 }} />}
+          >
             <Link to="/">Home</Link>
           </Menu.Item>
-          <Menu.Item key="2" icon={<FundOutlined />}>
+          <Menu.Item
+            style={{ paddingBottom: 10 }}
+            key="2"
+            icon={<FundOutlined style={{ fontSize: 20 }} />}
+          >
             <Link to="/cryptocurrencies">Cryptocurrencies</Link>
           </Menu.Item>
-          <Menu.Item key="3" icon={<MoneyCollectOutlined />}>
+          <Menu.Item
+            style={{ paddingBottom: 10 }}
+            key="3"
+            icon={<MoneyCollectOutlined style={{ fontSize: 20 }} />}
+          >
             <Link to="/exchanges">Exchanges</Link>
           </Menu.Item>
-          <Menu.Item key="4" icon={<BulbOutlined />}>
+          <Menu.Item
+            style={{ paddingBottom: 10 }}
+            key="4"
+            icon={<BulbOutlined style={{ fontSize: 20 }} />}
+          >
             <Link to="/news">News</Link>
           </Menu.Item>
         </Menu>
