@@ -69,6 +69,13 @@ a:hover {
   background-color: #fff !important;
   border: none !important;
 }
+.menu-container {
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: "35%";
+  left: "8%";
+}
 
 .loader {
   height: 81vh;

@@ -13,6 +13,13 @@ import icon from "../images/logo.png";
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(null);
+  const [menu, setMenu] = useState({
+    border: "none",
+    fontSize: 20,
+    position: "absolute",
+    top: "35%",
+    left: "8%",
+  });
 
   useEffect(() => {
     const handleReize = () => setScreenSize(window.innerWidth);
@@ -26,8 +33,16 @@ export default function Navbar() {
   useEffect(() => {
     if (screenSize < 768) {
       setActiveMenu(false);
+      setMenu({ border: "none", fontSize: 20 });
     } else {
       setActiveMenu(true);
+      setMenu({
+        border: "none",
+        fontSize: 20,
+        position: "absolute",
+        top: "35%",
+        left: "8%",
+      });
     }
   }, [screenSize]);
 
@@ -47,16 +62,7 @@ export default function Navbar() {
         />
       </div>
       {activeMenu && (
-        <Menu
-          theme="light"
-          style={{
-            border: "none",
-            fontSize: 20,
-            // position: "absolute",
-            // top: "35%",
-            // left: "8%",
-          }}
-        >
+        <Menu theme="light" style={menu} className="menu-container">
           <Menu.Item
             key="1"
             style={{ paddingBottom: 10 }}
