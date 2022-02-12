@@ -44,13 +44,14 @@ export default function Navbar() {
         fontSize: 20,
         position: "absolute",
         top: "35%",
-        width: "100%",
+        width: "92%",
+        left: "8%",
       });
     }
   }, [screenSize]);
 
   return (
-    <div className="nav-container" style={{ width: "20.15%" }}>
+    <div className="nav-container">
       <div className="logo-container">
         <Avatar src={icon} size="large" />
         <Typography.Title level={2}>

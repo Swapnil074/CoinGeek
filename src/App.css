@@ -46,13 +46,15 @@ a:hover {
   height: 100vh;
   margin: 0px;
   background-color: rgb(255, 255, 255);
+  width: 19.4%;
 }
 
 .logo-container {
   background-color: #ffffff;
   display: flex;
   padding: 20px;
-  width: 100%;
+  width: 95%;
+  margin-left: 5%;
 }
 .logo {
   margin: 0 0 0 15px;
@@ -75,6 +77,24 @@ a:hover {
   position: absolute;
   top: "35%";
   left: "8%";
+}
+
+.ant-menu-item {
+  color: #949494;
+}
+
+.ant-menu > .ant-menu-item:hover,
+.ant-menu > .ant-menu-item-open,
+.ant-menu > .ant-menu-item-selected,
+.ant-menu > .ant-menu-item:active,
+.ant-menu > .ant-menu-item-active,
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active,
+.ant-menu-light
+  .ant-menu-item-active
+  .ant-menu:not(.ant-menu-horizontal)
+  .ant-menu-item-selected {
+  color: #000;
 }
 
 .loader {
@@ -120,7 +140,7 @@ a:hover {
   }
 
   .nav-container {
-    height: 6vh;
+    height: 1vh;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -140,6 +160,14 @@ a:hover {
   }
   .show-more {
     font-size: 1.3rem !important;
+  }
+  .logo-container {
+    background-color: #ffffff;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    margin-left: 0;
+    height: 12px;
   }
 }
 
