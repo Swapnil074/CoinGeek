@@ -23,10 +23,11 @@ const News = ({ simplified }) => {
     <>
       <Row gutter={[24, 24]} className="news-card-container">
         {!simplified && (
-          <Col span={24}>
+          <Col span={24} style={{ borderRadius: 10 }}>
             <Select
               showSearch
               className="select-news"
+              style={{ borderRadius: 10 }}
               placeholder="Select Crypto"
               value={newsCategory}
               optionFilterProp="children"
@@ -35,7 +36,9 @@ const News = ({ simplified }) => {
                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
               }
             >
-              <Option value="Cryptocurrency">Cryptocurrency</Option>
+              <Option value="Cryptocurrency" style={{ borderRadius: 10 }}>
+                Cryptocurrency
+              </Option>
               {cryptosList?.data?.coins.map((coin) => (
                 <Option value={coin.name}>{coin.name}</Option>
               ))}
@@ -52,7 +55,9 @@ const News = ({ simplified }) => {
               <a href={news.url} target="_blank" rel="noreferrer">
                 <div className="news-image-container">
                   <Title level={4} className="news-title">
-                    {news.name}
+                    {news.name.length > 50
+                      ? `${news.name.substring(0, 50)}...`
+                      : news.name}
                   </Title>
                   <img
                     style={{
@@ -65,8 +70,8 @@ const News = ({ simplified }) => {
                   />
                 </div>
                 <p>
-                  {news.description > 100
-                    ? `${news.description.substring(0, 100)}...`
+                  {news.description.length > 180
+                    ? `${news.description.substring(0, 180)}...`
                     : news.description}
                 </p>
                 <div className="provider-container">

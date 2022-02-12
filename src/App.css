@@ -328,6 +328,10 @@ a:hover {
 .select-news {
   width: 180px;
 }
+.ant-select-selector {
+  border-radius: 10px;
+}
+
 .news-card {
   min-height: 300px !important;
 }
