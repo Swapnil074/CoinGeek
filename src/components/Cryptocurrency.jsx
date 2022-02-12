@@ -9,6 +9,7 @@ const Cryptocurrency = ({ simplified }) => {
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     const filterData = cryptosList?.data?.coins.filter((coins) =>
       coins.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -38,9 +39,12 @@ const Cryptocurrency = ({ simplified }) => {
                 extra={<img className="crypto-image" src={coin.iconUrl} />}
                 hoverable
               >
-                <p>Price: {millify(coin.price)}</p>
+                <p>Price: $ {millify(coin.price)}</p>
                 <p>Market Cap: {millify(coin.marketCap)}</p>
-                <p>Daily Change: {millify(coin.change)}%</p>
+
+                <p style={{ color: coin.change > 0 ? "green" : "red" }}>
+                  Daily Change: {millify(coin.change)}%
+                </p>
               </Card>
             </Link>
           </Col>

@@ -27,7 +27,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimestamp = [];
 
-  for (let i = 0; i < coinHistory?.data?.history?.length; i++) {
+  for (let i = coinHistory?.data?.history?.length - 1; i >= 0; i--) {
     coinTimestamp.push(
       moment.unix(coinHistory?.data?.history[i].timestamp).format("DD-MM-YYYY")
     );
@@ -67,7 +67,11 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
           {coinName} Price Chart{" "}
         </Typography.Title>
         <Col className="price-container">
-          <Typography.Title level={5} className="price-change">
+          <Typography.Title
+            level={5}
+            className="price-change"
+            style={{ color: coinHistory?.data?.change > 0 ? "green" : "red" }}
+          >
             Change: {coinHistory?.data?.change}%
           </Typography.Title>
           <Typography.Title level={5} className="current-price">

@@ -117,7 +117,7 @@ const CoinDetails = () => {
           </Select>
           <LineChart
             coinHistory={coinHistory}
-            currency={millify(cryptoDetails.price)}
+            currentPrice={millify(cryptoDetails.price)}
             coinName={cryptoDetails.name}
           />
 
