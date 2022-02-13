@@ -10,7 +10,7 @@ var options = {
 const newsApiHeaders = {
   "x-bingapis-sdk": "true",
   "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-  "x-rapidapi-key": "b93c8f06b8mshed1bf250d2c1121p1536afjsn4eaf20d6d7bc",
+  "x-rapidapi-key": process.env.REACT_APP_CRYPTOEWS_API_KEY,
 };
 
 const baseUrl = "https://bing-news-search1.p.rapidapi.com/news";

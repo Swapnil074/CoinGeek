@@ -9,7 +9,7 @@ import {
   MenuOutlined,
   BulbOutlined,
 } from "@ant-design/icons";
-import icon from "../images/logo.png";
+import icon from "../images/logo1.png";
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(true);
