@@ -3,6 +3,7 @@ import { Select, Typography, Row, Col, Avatar, Card } from "antd";
 import moment from "moment";
 import { useGetNewsQuery } from "../services/newsApi";
 import { useGetCryptosQuery } from "../services/cryptoApi";
+import Loader from "./Loader";
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -17,7 +18,7 @@ const News = ({ simplified }) => {
     newsCategory,
     count: simplified ? 5 : 20,
   });
-  if (isFetching) return <div>Loading...</div>;
+  if (isFetching) return <Loader />;
 
   return (
     <>

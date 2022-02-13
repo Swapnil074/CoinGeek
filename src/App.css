@@ -367,6 +367,7 @@ a:hover {
 }
 .chart-title {
   color: #0071bd !important;
+  margin-top: 20px;
 }
 .price-container {
   display: flex !important;
