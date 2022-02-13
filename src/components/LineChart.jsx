@@ -41,8 +41,10 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
         label: "Price in USD",
         data: coinPrice,
         fill: false,
-        backgroundColor: "#0071bd",
-        borderColor: "#0071bd",
+        backgroundColor: coinHistory?.data?.change > 0 ? "green" : "red",
+        borderColor: coinHistory?.data?.change > 0 ? "green" : "red",
+        borderWidth: 2,
+        tension: 0.1,
       },
     ],
   };
@@ -54,9 +56,14 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
           ticks: {
             beginAtZero: true,
           },
+          gridLines: {
+            display: false,
+            color: "#ffffff",
+          },
         },
       ],
     },
+    pointHoverBackgroundColor: "red",
   };
 
   return (

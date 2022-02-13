@@ -363,10 +363,10 @@ a:hover {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  color: #0071bd;
+  color: #051529;
 }
 .chart-title {
-  color: #0071bd !important;
+  color: #051529 !important;
   margin-top: 20px;
 }
 .price-container {
