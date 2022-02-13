@@ -17,8 +17,8 @@ const App = () => {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="main">
-        <Layout style={{ backgroundColor: "#FFFFFF" }}>
+      <div className="main" style={{ backgroundColor: "#051529" }}>
+        <Layout style={{ backgroundColor: "#051529" }}>
           <div className="routes">
             <Switch>
               <Route exact path="/">

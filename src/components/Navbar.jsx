@@ -46,6 +46,7 @@ export default function Navbar() {
         top: "35%",
         width: "92%",
         left: "8%",
+        height: "50%",
       });
     }
   }, [screenSize]);
@@ -58,8 +59,8 @@ export default function Navbar() {
           <Link
             to="/"
             style={{
-              color: "#000000",
-              paddingLeft: 10,
+              color: "#FFFFFF",
+              paddingLeft: 25,
               height: 60,
             }}
           >
@@ -73,11 +74,10 @@ export default function Navbar() {
         />
       </div>
       {activeMenu && (
-        <Menu theme="light" style={menu} className="menu-container">
+        <Menu theme="dark" style={menu} className="menu-container">
           <Menu.Item
             key="1"
             style={{
-              paddingBottom: 10,
               height: 60,
             }}
             onClick={() => router.push("/")}
@@ -86,7 +86,7 @@ export default function Navbar() {
             Home
           </Menu.Item>
           <Menu.Item
-            style={{ paddingBottom: 10, height: 60 }}
+            style={{ height: 60 }}
             className="menu-btn"
             key="2"
             icon={<FundOutlined style={{ fontSize: 20 }} />}
@@ -95,15 +95,18 @@ export default function Navbar() {
             Cryptocurrencies
           </Menu.Item>
           <Menu.Item
-            style={{ paddingBottom: 10, height: 60 }}
+            style={{ height: 60 }}
             key="3"
+            disabled
             onClick={() => router.push("/exchanges")}
             icon={<MoneyCollectOutlined style={{ fontSize: 20 }} />}
           >
             Exchanges
           </Menu.Item>
           <Menu.Item
-            style={{ paddingBottom: 10 }}
+            style={{
+              height: 60,
+            }}
             key="4"
             onClick={() => router.push("/news")}
             icon={<BulbOutlined style={{ fontSize: 20 }} />}

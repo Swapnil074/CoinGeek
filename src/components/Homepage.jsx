@@ -12,6 +12,7 @@ const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
   if (isFetching) return <div>Loading...</div>;
+  console.log(data);
 
   return (
     <>
@@ -52,7 +53,7 @@ const Homepage = () => {
       </Row>
       <div className="home-heading-container">
         <Title level={2} className="home-title">
-          Top 10 currencies by market cap
+          Top 10 Cryptocurrencies by Market Cap
         </Title>
         <Title level={3} className="show-more">
           <Link to="/cryptocurrencies">Show More</Link>
