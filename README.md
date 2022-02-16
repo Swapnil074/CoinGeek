@@ -20,7 +20,7 @@ their prices history,news and a brief description about them.</p>
 
 ## Screenshots
 
-![UI Design](https://user-images.githubusercontent.com/53442514/154294849-7e0cbf14-6493-45bc-b5a6-2402f296ccce.png "UI Design")
+![UI Design](https://user-images.githubusercontent.com/53442514/154297486-b80d0bda-fe5d-4f26-905d-281cf67bb15d.png "UI Design")
 
 ![Home Page-1](https://user-images.githubusercontent.com/53442514/154296206-cc3603bc-5c5c-4c8b-8869-236613fece3e.png "Home Page-1")
 
