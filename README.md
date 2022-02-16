@@ -20,13 +20,18 @@ their prices history,news and a brief description about them.</p>
 
 ## Screenshots
 
-![UI Design](https://user-images.githubusercontent.com/53442514/154294849-7e0cbf14-6493-45bc-b5a6-2402f296ccce.png"UI Design")
+![UI Design](https://user-images.githubusercontent.com/53442514/154294849-7e0cbf14-6493-45bc-b5a6-2402f296ccce.png "UI Design")
 
 ![Home Page-1](https://user-images.githubusercontent.com/53442514/154296206-cc3603bc-5c5c-4c8b-8869-236613fece3e.png "Home Page-1")
 
 ![Home Page-2](https://user-images.githubusercontent.com/53442514/154296301-8e7da18d-b7f7-4d28-81c3-19e9912cfb20.png "Home Page-2")
 
 ![Cryptocurrency Page](https://user-images.githubusercontent.com/53442514/154296644-28bfc4d5-ea89-41f8-a7e0-1439d96f95ab.png "Cryptocurrency Page")
+
+![News Page](https://user-images.githubusercontent.com/53442514/154296961-b831302c-e82f-426f-85f2-e6afb603ac54.png "News Page")
+
+
+![Mobile View](https://user-images.githubusercontent.com/53442514/154297114-5e43ac3e-72f2-47ad-abe1-a508ca4b1569.png "Mobile View")
 
 
 
